@@ -18,6 +18,7 @@ provider "aws" {
 resource "aws_instance" "app_server" {
     ami           = "ami-0ecc74eca1d66d8a6" // Imagem do sistema
     instance_type = "t2.micro"
+    key_name      = "iac-alura"
 
     //Nome que podemos dar para a nossa instancia
     tags = {
