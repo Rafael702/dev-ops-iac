@@ -3,7 +3,16 @@
     - name: criando arquivo
       copy:
         dest: /home/ubuntu/index.html
-        content: <h1>Ce e o bixao memo em<h1>
+        content: <h1>Python3 e VirtualEnv Instalado com Sucesso.<h1>
     - name: criando servidor
       shell: "nohup busybox httpd -f -p 8080 &"
       # & -> E-Comercial: Serve para deixar a aplicacao rodando mesmo quando desligarmos a maquina.
+    - name: Instalando o python3, virtualenv
+      apt:
+        pkg:
+        - python3
+        - virtualenv
+        update_cache: yes
+      become: yes
+      # become -> super usuario = sudo
+      # Atualizar os pacotes -> update_cache

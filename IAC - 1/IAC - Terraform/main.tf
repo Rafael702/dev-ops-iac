@@ -28,7 +28,7 @@ resource "aws_instance" "app_server" {
 
     //Nome que podemos dar para a nossa instancia
     tags = {
-        Name = "Teste AWS"
+        Name = "Terraform Ansible Python"
     }
 }
 
