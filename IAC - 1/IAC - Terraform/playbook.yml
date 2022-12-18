@@ -1,0 +1,9 @@
+- hosts: terraform-ansible
+  tasks:
+    - name: criando arquivo
+      copy:
+        dest: /home/ubuntu/index.html
+        content: <h1>Ce e o bixao memo em<h1>
+    - name: criando servidor
+      shell: "nohup busybox httpd -f -p 8080 &"
+      # & -> E-Comercial: Serve para deixar a aplicacao rodando mesmo quando desligarmos a maquina.
