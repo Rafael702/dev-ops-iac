@@ -16,3 +16,9 @@
       become: yes
       # become -> super usuario = sudo
       # Atualizar os pacotes -> update_cache
+    - name: Instalando dependencias com pip (Django e Django Rest)
+      pip: 
+        virtualenv: /home/ubuntu/tcc/venv
+        name:
+          - django
+          - djangorestframework'
